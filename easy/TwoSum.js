@@ -11,11 +11,9 @@
 var twoSum = function (nums, target) {
   let n = nums.length;
   for (i = 0; i < n; i++) {
-    if (nums[i] <= target) {
-      for (j = i + 1; j < n - 1; j++) {
-        if (nums[i] + nums[j] === target) {
-          return [i, j];
-        }
+    for (j = i + 1; j < n - 1; j++) {
+      if (nums[i] + nums[j] === target) {
+        return [i, j];
       }
     }
   }
